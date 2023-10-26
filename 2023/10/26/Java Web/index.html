@@ -1,0 +1,1978 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="啊语的小空间">
+    <meta name="description" content="Java Web1、Java Script1.1 js引入方式
+内部脚本：将js代码定义在HTML页面中
+
+在html中，js代码必须位于&amp;#x3D;&amp;#x3D;==标签中
+123&amp;lt;script&amp;gt;    alert(Hello ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>啊语的小空间</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">啊语的小空间</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">啊语的小空间</div>
+        <div class="logo-desc">
+            
+            小语的个人博客
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-10-26
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2023-10-26
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    6.9k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    29 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Java-Web"><a href="#Java-Web" class="headerlink" title="Java Web"></a>Java Web</h1><h1 id="1、Java-Script"><a href="#1、Java-Script" class="headerlink" title="1、Java Script"></a>1、Java Script</h1><h3 id="1-1-js引入方式"><a href="#1-1-js引入方式" class="headerlink" title="1.1 js引入方式"></a>1.1 js引入方式</h3><ol>
+<li><strong>内部脚本：将js代码定义在HTML页面中</strong></li>
+</ol>
+<p>在html中，js代码必须位于&#x3D;&#x3D;<script>==标签中</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="title function_">alert</span>(<span class="title class_">Hello</span> js)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<ul>
+<li>可以在HTML文档中的任意地方放置任意数量的script标签</li>
+<li>一般把脚本置于body元素的底部，可改善显示速度，因为脚本执行会拖慢显示</li>
+</ul>
+<ol start="2">
+<li>外部脚本</li>
+</ol>
+<p>将js代码定义在外部js文件中，然后引入到HTML页面中</p>
+<ul>
+<li><p>引入外部文件</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;....&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>注意：</p>
+<ul>
+<li>外部脚本不能包含script标签</li>
+<li>script标签不能自闭合</li>
+</ul>
+<h3 id="1-2-js基础语法"><a href="#1-2-js基础语法" class="headerlink" title="1.2 js基础语法"></a>1.2 js基础语法</h3><ol>
+<li><p>输出语句</p>
+<ul>
+<li>使用window.alert()写入警告框</li>
+<li>使用document.write()写入HTML输出</li>
+<li>使用console.log()写入浏览器控制台</li>
+</ul>
+</li>
+<li><p>变量</p>
+<ul>
+<li>js中用==var==关键字来声明变量（==全局变量==）</li>
+<li>js是一门弱类型语言，变量可以存放不同类型的值</li>
+<li>变量名规则：、<ul>
+<li>组成字符可以是任何字母、数字、下划线或美元符号</li>
+<li>数字不能开头</li>
+<li>建议使用驼峰命名</li>
+</ul>
+</li>
+<li>==let==关键字定义的变量只能在所在代码块中生效，且不可重复定义</li>
+<li>==const==关键字，用来声明一个只读的常量。一旦声明，常量值就不可改变</li>
+</ul>
+</li>
+<li><p>数据类型</p>
+<p>js中分为：原始类型和引用类型</p>
+<p>五种原始类型：</p>
+<ul>
+<li>number：数字</li>
+<li>string：字符、字符串、单双引皆可</li>
+<li>boolean：布尔。true、false</li>
+<li>null：对象为空</li>
+<li>undefined：当声明的变量未初始化时，该变量默认为undefined</li>
+</ul>
+<p>使用typeod运算符可以获取数据类型</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">alert</span>(<span class="keyword">typeof</span> 变量名)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运算符</p>
+<ul>
+<li>==：<ol>
+<li>判断类型是否一样，如果不一样，则进行类型转换</li>
+<li>再去比较其值</li>
+</ol>
+</li>
+<li>===：全等于<ol>
+<li>判断类型是否一样，如果不一样，直接返回false</li>
+<li>再去比较其值</li>
+</ol>
+</li>
+<li>类型转换：<ul>
+<li>其他类型转为number：<ol>
+<li>string：==在字符串前面写一个+==，按照字符串的字面值，转为数字，如果字面值不是数字，则转换为NaN，一般使用==parseInt==</li>
+<li>boolean：true转为1，false转为0</li>
+</ol>
+</li>
+<li>其他类型转为boolean：<ol>
+<li>number：0和NaN会转为false，其他的数字会转为true</li>
+<li>string：空字符串转为false，其他转为true</li>
+<li>null：转为false</li>
+<li>undefined：转为false</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>函数</p>
+<p>函数（方法）是被设计为执行特定任务的代码块</p>
+<ul>
+<li><p>定义：js通过==function==关键字进行定义，语法为v</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">functionName</span>(<span class="params">参数一，参数二</span>)&#123;</span><br><span class="line">    要执行的代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong></p>
+<ul>
+<li><p>形参不需要类型，因为js是弱类型语言</p>
+</li>
+<li><p>返回值也不需要类型，可以在函数中直接使用return返回</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">a,b</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>调用：函数名称（实际参数列表）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> result=<span class="title function_">add</span>(<span class="number">1</span>,<span class="number">2</span>)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="1-3-js对象"><a href="#1-3-js对象" class="headerlink" title="1.3 js对象"></a>1.3 js对象</h3><ol>
+<li><p>Array</p>
+<p>用于定义数组</p>
+<ul>
+<li><p>定义</p>
+<p>var 变量名 = new Array(元素列表)  方式一</p>
+<p>var 变量名=[元素列表]</p>
+</li>
+<li><p>访问</p>
+<p>arr[索引]=值</p>
+</li>
+<li><p><strong>注意：</strong>js数组类似于java集合，长度，类型都可变</p>
+</li>
+<li><p>方法</p>
+<p>push：添加方法</p>
+<p>splice：删除元素</p>
+</li>
+</ul>
+</li>
+<li><p>String</p>
+<ul>
+<li><p>定义</p>
+<p>var 变量名 = new String(s)  方式一</p>
+<p>var 变量名=s   方式二</p>
+</li>
+<li><p>属性</p>
+<p>length：字符串长度</p>
+</li>
+<li><p>方法</p>
+<p>charAt()   返回在指定位置的字符</p>
+<p>indxOf()	检索字符串，返回下标</p>
+<p>trim()	去除字符串前后两端的空白字符</p>
+</li>
+</ul>
+</li>
+<li><p>自定义对象</p>
+<ul>
+<li><p>格式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> 对象名称 = &#123;</span><br><span class="line">    属性名称<span class="number">1</span>:属性值<span class="number">1</span>，</span><br><span class="line">    属性名称<span class="number">2</span>:属性值<span class="number">2</span>,</span><br><span class="line">    ...</span><br><span class="line">    函数名称:<span class="keyword">function</span>(<span class="params">形参列表</span>)&#123;&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h3 id="1-4-BOM"><a href="#1-4-BOM" class="headerlink" title="1.4 BOM"></a>1.4 BOM</h3><ul>
+<li><p>Browser Object Model  浏览器对象模型</p>
+</li>
+<li><p>js将浏览器的各个组成部分封装成对象</p>
+</li>
+<li><p>组成：</p>
+<ul>
+<li><p><strong>window：浏览器窗口对象</strong></p>
+<ul>
+<li><p>获取：直接使用window，其中window.可以省略</p>
+</li>
+<li><p>属性：获取其他BOM对象</p>
+</li>
+<li><p>方法</p>
+<p>alert()：显示带有一段消息和一个确认按钮的警告框</p>
+<p>confirm()：显示带有一段消息以及确认和取消按钮的对话框，有返回值true或false</p>
+<p>setInterval()：按照指定的周期(毫秒计)来调用函数或计算表达式</p>
+<p>setTimeout()：在指定的毫秒数后调用函数或计算表达式</p>
+</li>
+</ul>
+</li>
+<li><p>Navigator：浏览器对象</p>
+</li>
+<li><p>Screen：屏幕对象</p>
+</li>
+<li><p><strong>History：历史记录对象</strong></p>
+<ul>
+<li><p>获取：使用window.history获取，其中window.可以省略</p>
+</li>
+<li><p>方法：</p>
+<p>back()：加载history列表中的前一个URL</p>
+<p>forward()：加载history列表中的下一个URL</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Location：地址栏对象</strong></p>
+<ul>
+<li>获取：使用widow.location获取，其中window.可以省略</li>
+<li>属性：href 设置或返回完整的URL</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-5-DOM"><a href="#1-5-DOM" class="headerlink" title="1.5 DOM"></a>1.5 DOM</h3><ul>
+<li><p>Document Object Model 文档对象模型</p>
+<p><img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221217161752533.png" alt="image-20221217161752533"></p>
+</li>
+<li><p>将标记语言的各个组成部分封装为对象</p>
+<ul>
+<li><p>Document：整个文档对象</p>
+</li>
+<li><p>Element：元素对象(标签)</p>
+<ul>
+<li><p>获取Element对象：使用Document对象的方法来获取</p>
+<p>getElementById：根据id属性值获取，返回一个Element对象</p>
+<p>getElementsByTagName：根据标签名获取，返回对象数组</p>
+<p>getElementsByName：根据name属性值获取，返回对象数组</p>
+<p>getElementsByClassName：根据class属性值获取，返回对象数组</p>
+</li>
+<li><p>使用</p>
+</li>
+</ul>
+</li>
+<li><p>Attribute：属性对象</p>
+</li>
+<li><p>Text：文本对象</p>
+</li>
+<li><p>Comment：注释对象</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-6-事件监听"><a href="#1-6-事件监听" class="headerlink" title="1.6 事件监听"></a>1.6 事件监听</h3><p>事件：HTML事件是发生在HTML元素上的事情。比如：</p>
+<ul>
+<li>按钮被点击</li>
+<li>鼠标移动到元素之上</li>
+<li>按下键盘按键</li>
+</ul>
+<p>事件监听：js可以在事件被侦测到时==执行代码==</p>
+<h4 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h4><p>方式一：通过HTML标签中的事件属性进行绑定</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;on()&quot;</span>&gt;</span></span><br><span class="line">function on()&#123;</span><br><span class="line">...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>方式二：通过DOM元素属性绑定</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;btn&quot;</span>).<span class="property">onclick</span>=<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-7-正则表达式"><a href="#1-7-正则表达式" class="headerlink" title="1.7 正则表达式"></a>1.7 正则表达式</h3><p>概念：正别表达式定义了字符串组成的规则</p>
+<p>定义：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/^\w&#123;6,12&#125;$/</span>;</span><br></pre></td></tr></table></figure>
+
+<p>语法：</p>
+<ul>
+<li>^:	表示开始</li>
+<li>$:    表示结束</li>
+<li>[]:    代表某个范围内的单个字符，比如:[0-9]单个数字字符·</li>
+<li>.:代表任意单个字符，除了换行和行结束符</li>
+<li>\w:代表单词字符:字母、数字、下划线(<em>)，相当于[A-Za-zO-9</em>]</li>
+<li>\d:代表数字字符:相当于[0-9]</li>
+<li>量词:</li>
+<li>+:至少一个</li>
+<li>*:零个或多个</li>
+<li>?:零个或一个{x}: x个</li>
+<li>{m,}:至少m个</li>
+<li>{m,n}:至少m个，最多n个</li>
+</ul>
+<h1 id="2、HTTP"><a href="#2、HTTP" class="headerlink" title="2、HTTP"></a>2、HTTP</h1><h3 id="2-1-概念"><a href="#2-1-概念" class="headerlink" title="2.1 概念"></a>2.1 概念</h3><p>HyperText Transfer Protocol，超文本传输协议，规定了浏览器和服务器之间数据传输的规则</p>
+<p>HTTP协议特点：</p>
+<ol>
+<li>基于TCP协议：面向连接，安全</li>
+<li>基于请求-响应模型的：一次请求对应一次响应</li>
+<li>HTTP协议是无状态的协议：对于事务处理没有记忆能力。每次请求-响应都是独立的。<ul>
+<li>缺点：多次请求间不能共享数据</li>
+<li>优点：速度快</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-2-请求数据格式"><a href="#2-2-请求数据格式" class="headerlink" title="2.2 请求数据格式"></a>2.2 请求数据格式</h3><p>请求数据分为三部分：</p>
+<p><img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221217175624828.png" alt="image-20221217175624828"></p>
+<ol>
+<li><strong>请求行</strong>：请求数据的第一行。其中GET表示请求方式， /  表示请求资源路径   HTTP/1.1表示协议版本</li>
+<li><strong>请求头</strong>：第二行开始，格式为key：value形式</li>
+<li><strong>请求体</strong>：POST请求的最后一部分，存放请求参数</li>
+</ol>
+<p>常见的HTTP请求头：</p>
+<ul>
+<li><strong>Host</strong>：表示请求的主机名</li>
+<li><strong>User</strong>-<strong>Agent</strong>：浏览器版本</li>
+<li><strong>Accept</strong>：表示浏览器能接收的资源类型，如text/* ,image/*  或者<code>*/*</code>表示所有</li>
+<li><strong>Accept</strong>-<strong>language</strong>：表示浏览器偏好的语言，服务器可以根据此返回不同语言的网页</li>
+<li><strong>Accept</strong>-<strong>Encoding</strong>：表示浏览器可以支持的压缩类型，例如gzip，deflate等</li>
+</ul>
+<p>GET请求和POST请求的区别：</p>
+<ol>
+<li><p>GET请求请求参数在请求行中，没有请求体</p>
+<p>POST请求请求参数在请求体中</p>
+</li>
+<li><p>GET请求请求参数大小有限制，POST没有</p>
+</li>
+</ol>
+<h3 id="2-3-响应数据格式"><a href="#2-3-响应数据格式" class="headerlink" title="2.3 响应数据格式"></a>2.3 响应数据格式</h3><p>响应数据分为三部分：</p>
+<p><img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221217181649201.png" alt="image-20221217181649201"></p>
+<ol>
+<li><strong>响应行</strong>：响应数据的第一行。其中HTTP/1.1 表示协议版本，200表示响应成功码，OK表示状态码描述</li>
+</ol>
+<img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221217181717484.png" alt="image-20221217181717484" style="zoom:67%;" />
+
+<ol>
+<li><strong>响应头</strong>：第二行开始，格式为key：value形式</li>
+<li><strong>响应体：</strong>最后一部分。存放响应数据</li>
+</ol>
+<p>常见的HTTP响应头：</p>
+<ul>
+<li><strong>Content</strong>-<strong>Type</strong>：表示该响应内容的类型，例如text/html,img/jpeg;</li>
+<li><strong>Content-Length</strong>：表示该响应内容的长度（字节数）</li>
+<li><strong>Content-Encoding</strong>：表示该响应压缩算法，例如gzip</li>
+<li><strong>Cache-Control</strong>：指示客户端应如何缓存，例如max-age=300  表示可以最多缓存300秒</li>
+</ul>
+<h1 id="3、Tomcat"><a href="#3、Tomcat" class="headerlink" title="3、Tomcat"></a>3、Tomcat</h1><h4 id="Web服务器"><a href="#Web服务器" class="headerlink" title="Web服务器"></a>Web服务器</h4><p>Web服务器是一个应用程序，对HTTP协议的操作进行了封装，使得程序员不必直接对协议进行操作，让web开发更加便捷。主要功能是”提供网上信息浏览服务“</p>
+<h4 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h4><p>是Apache软件基金会的一个核心项目，是一个开源免费的轻量级Web服务器，支持Servlet/JSP少量JavaEE规范</p>
+<p>也被称为Web容器、Servlet容器。Servlet需要依赖于Tomcat才能运行</p>
+<h1 id="4、Idae创建Maven-Web项目"><a href="#4、Idae创建Maven-Web项目" class="headerlink" title="4、Idae创建Maven Web项目"></a>4、Idae创建Maven Web项目</h1><p><img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221217195410234.png"></p>
+<h1 id="5、Servlet"><a href="#5、Servlet" class="headerlink" title="5、Servlet"></a>5、Servlet</h1><h3 id="1-环境搭建"><a href="#1-环境搭建" class="headerlink" title="1.环境搭建"></a>1.环境搭建</h3><ul>
+<li>是java提供的一门动态Web资源开发技术</li>
+<li>Servlet是JavaEE规范之一，其实就是一个接口，将来我们需要定义Servlet类实现Servlet接口，并由web服务器运行Servlet</li>
+</ul>
+<p>步骤：</p>
+<ol>
+<li><p>创建Web项目，导入Servlet依赖坐标</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.servlet<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>javax.servlet-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.0.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建：定义一个类，实现Servlet接口，并重写接口中所有方法，并在service方法中输入一句话</p>
+</li>
+<li><p>配置：在类上使用@WebServlet注解，配置该Servlet的访问路径</p>
+</li>
+<li><p>访问：启动tomcat，浏览器输入URL访问该Servlet</p>
+</li>
+</ol>
+<h3 id="2-Servlet生命周期"><a href="#2-Servlet生命周期" class="headerlink" title="2.Servlet生命周期"></a>2.Servlet生命周期</h3><ol>
+<li><p><strong>加载和实例化：</strong>默认情况下，当servlet第一次被访问时，由容器创建Servlet对象</p>
+<p><img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221217215514174.png" alt="image-20221217215514174"></p>
+</li>
+<li><p><strong>初始化：</strong>在Servlet实例化之后，容器将调用Servlet的init()方法初始化这个对象，完成一些如加载配置文件、创建链接等初始化工作。<strong>该方法只调用一次</strong></p>
+</li>
+<li><p><strong>请求处理：</strong>每次请求Servlet时，Servlet容器都会调用Servlet的service()方法对请求进行处理</p>
+</li>
+<li><p><strong>服务终止：</strong>当需要释放内存或容器关闭时，容器就会调用Servlet实例的destroy()方法完成资源的释放。在destroy()方法调用之后，容器会释放这个Servlet实例，该实例最后会被java的垃圾回收器所回收</p>
+</li>
+</ol>
+<h3 id="3-Servlet体系结构"><a href="#3-Servlet体系结构" class="headerlink" title="3.Servlet体系结构"></a>3.Servlet体系结构</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/test2&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServletDemo2</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p>HttpServlet使用步骤</p>
+<ul>
+<li>继承HttpServlet</li>
+<li>重写doGet和doPost方法</li>
+</ul>
+</li>
+<li><p>HttpServlet原理</p>
+<p>获取请求方式，并根据不同的请求方式调用不同的doXxx方法</p>
+</li>
+</ol>
+<h3 id="4-Servlet-urlPattern配置"><a href="#4-Servlet-urlPattern配置" class="headerlink" title="4.Servlet urlPattern配置"></a>4.Servlet urlPattern配置</h3><p>Servlet想要被访问，必须配置其访问路径（urlPattern）</p>
+<ol>
+<li><p>一个Servlet可以配置多个urlPattern</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(urlPatterns = &#123;&quot;/test2&quot;,&quot;/test3&quot;&#125;)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>urlPattern配置规则</p>
+<ul>
+<li><p>精确匹配（优先级高于目录匹配）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/test2/one&quot;)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>目录匹配</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/test2/*&quot;)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>扩展名匹配</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/*.do&quot;)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>任意匹配</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/&quot;)</span>或</span><br><span class="line"><span class="meta">@WebServlet(&quot;/*&quot;)</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h3 id="5-XML配置Servlet"><a href="#5-XML配置Servlet" class="headerlink" title="5.XML配置Servlet"></a>5.XML配置Servlet</h3><p>在web.xml中进行配置</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>demo3<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>com.jppppppx.dao.ServletDemo3<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>demo3<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/demo3<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="6-Request请求-Response响应"><a href="#6-Request请求-Response响应" class="headerlink" title="6.Request请求 & Response响应"></a>6.Request请求 & Response响应</h3><ul>
+<li>Request：获取请求数据</li>
+<li>Respond：设置响应数据</li>
+</ul>
+<h4 id="6-1-Request获取请求数据"><a href="#6-1-Request获取请求数据" class="headerlink" title="6.1 Request获取请求数据"></a>6.1 Request获取请求数据</h4><p><img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221217225856956.png" alt="image-20221217225856956"></p>
+<p>​	Post方式获取请求体是通过输入流获取</p>
+<p><img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221217231752889.png" alt="image-20221217231752889"></p>
+<h4 id="6-2-乱码解决"><a href="#6-2-乱码解决" class="headerlink" title="6.2.乱码解决"></a>6.2.乱码解决</h4><p>解决Post方法乱码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">req.setCharacterEncoding(<span class="string">&quot;utf-8&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：此方法要放在获取参数之前</p>
+<h4 id="6-3-请求转发"><a href="#6-3-请求转发" class="headerlink" title="6.3.请求转发"></a>6.3.请求转发</h4><p>一种在服务器内</p>
+<p>部的资源跳转方式</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">req.getRequestDispatcher(<span class="string">&quot;目标路径&quot;</span>).forward(req,resp);</span><br></pre></td></tr></table></figure>
+
+<img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221218164807408.png" alt="image-20221218164807408" style="zoom:67%;" />
+
+
+
+<p>存储数据</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//存储数据</span></span><br><span class="line">req.setAttribute(<span class="string">&quot;u&quot;</span>,req.getParameter(<span class="string">&quot;name&quot;</span>));</span><br><span class="line">req.setAttribute(<span class="string">&quot;p&quot;</span>,req.getParameter(<span class="string">&quot;password&quot;</span>));</span><br><span class="line"><span class="comment">//转发数据</span></span><br><span class="line">req.getRequestDispatcher(<span class="string">&quot;/test2&quot;</span>).forward(req,resp);</span><br></pre></td></tr></table></figure>
+
+<p>获取数据</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(request.getAttribute(<span class="string">&quot;u&quot;</span>));</span><br></pre></td></tr></table></figure>
+
+
+
+<p>请求转发特点：</p>
+<ul>
+<li>浏览器地址栏路径不发生变化</li>
+<li>只能转发到当前服务器的内部资源</li>
+<li>一次请求，可以在转发的资源间使用request共享数据</li>
+</ul>
+<h4 id="6-4Response设置响应数据"><a href="#6-4Response设置响应数据" class="headerlink" title="6.4Response设置响应数据"></a>6.4Response设置响应数据</h4><ul>
+<li><p>响应行：HTTP/1.1 200  OK</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> <span class="title function_">setStatus</span><span class="params">(<span class="type">int</span> sc)</span>  设置响应状态码</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>响应头：Content-Type：text/html</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> <span class="title function_">setHeader</span><span class="params">(String name,Sring value)</span>  设置响应头键值对</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>响应体：html页面</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PrintWriter <span class="title function_">getWriter</span><span class="params">()</span> 获取字符输出流</span><br><span class="line">    </span><br><span class="line">ServletOutputStream <span class="title function_">getOutputStream</span><span class="params">()</span> 获取字节输出流    </span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>Response完成重定向</strong></p>
+<p>一种资源跳转方式</p>
+<ol>
+<li>==状态码302==</li>
+<li>==响应头location：xxx==</li>
+</ol>
+<p>简化方式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reponse.sendRedirect(目标地址)</span><br></pre></td></tr></table></figure>
+
+<p>重定向特点：</p>
+<ul>
+<li>浏览器地址栏路径发生变化</li>
+<li>可以重定向到任意位置的资源（服务器内部外部均可）</li>
+<li>两次请求，不存在多个资源使用request共享数据</li>
+</ul>
+<h4 id="路径问题"><a href="#路径问题" class="headerlink" title="路径问题"></a>路径问题</h4><ul>
+<li><p>明确路径谁使用</p>
+<ol>
+<li>浏览器使用：需要加虚拟目录（项目访问路径）</li>
+<li>服务端使用：不需要加虚拟目录</li>
+</ol>
+</li>
+<li><p>动态获取虚拟目录</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">request.getContextPath();</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="Response设置响应字符数据"><a href="#Response设置响应字符数据" class="headerlink" title="Response设置响应字符数据"></a>Response设置响应字符数据</h4><ol>
+<li><p>通过Response对象获取字符输出流</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PrintWriter writer=resp.getWriter();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>写数据</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">writer.write(<span class="string">&quot;xxx&quot;</span>);</span><br></pre></td></tr></table></figure></li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">注意：writer不用关闭</span><br><span class="line">response.setHeader(<span class="string">&quot;content-type&quot;</span>,<span class="string">&quot;text/html;charset=utf-8&quot;</span>);</span><br><span class="line"><span class="type">PrintWriter</span> <span class="variable">writer</span> <span class="operator">=</span> response.getWriter();</span><br><span class="line">writer.write();</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Response设置响应字节数据"><a href="#Response设置响应字节数据" class="headerlink" title="Response设置响应字节数据"></a>Response设置响应字节数据</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">response.setContentType(<span class="string">&quot;text/html;charset=utf-8&quot;</span>);</span><br><span class="line"><span class="type">ServletOutputStream</span> <span class="variable">outputStream</span> <span class="operator">=</span> response.getOutputStream();</span><br><span class="line">outputStream.write(<span class="string">&quot;蒋平旭&quot;</span>.getBytes());</span><br></pre></td></tr></table></figure>
+
+
+
+<p>IOUtils工具类使用</p>
+<ol>
+<li><p>导入坐标</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="6、JSP"><a href="#6、JSP" class="headerlink" title="6、JSP"></a>6、JSP</h1><h2 id="JSP"><a href="#JSP" class="headerlink" title="JSP"></a>JSP</h2><ul>
+<li>概念：Java Server Pages，Jave服务端页面</li>
+<li>一种动态的网页技术，其中既可以定义HTML、JS、CSS等==静态==内容，还可以定义Java代码的动态内容</li>
+<li>JSP=HTML+Java</li>
+<li>JSP的作用：简化开发，避免了在Servlet中直接输出HTML标签</li>
+<li>JSP本质上就是一个Servlet</li>
+</ul>
+<p><strong>原理：</strong>JSP在被访问时，由JSP容器（Tomcat）将其转换为Java文件（Servlet），再由JSP容器将其编译，最终对外提供服务的其实就是这个字节码文件</p>
+<h2 id="6-1-环境配置"><a href="#6-1-环境配置" class="headerlink" title="6.1 环境配置"></a>6.1 环境配置</h2><ol>
+<li><p>导入jsp坐标</p>
+<p><strong>tomcat自带，因此打包需要去除，因此作用域选择provided</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.servlet.jsp<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jsp-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建JSP文件</p>
+</li>
+<li><p>编写HTML标签和Java代码</p>
+</li>
+</ol>
+<h2 id="6-2-JSP脚本"><a href="#6-2-JSP脚本" class="headerlink" title="6.2 JSP脚本"></a>6.2 JSP脚本</h2><ul>
+<li>JSP脚本用于在JSP页面内定义Java代码</li>
+<li>JSP脚本分类：<ol>
+<li><%  ....   %>：内容会直接放到_jspService()方法之中</li>
+<li><%=  ....  %>：内容会放到out.print()中，作为其参数</li>
+<li><%! .....%>：内容会放到_jspService()方法之外，会被类直接包含</li>
+</ol>
+</li>
+</ul>
+<img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221219220013755.png" alt="image-20221219220013755" style="zoom:80%;" />
+
+<h2 id="6-3-EL表达式"><a href="#6-3-EL表达式" class="headerlink" title="6.3 EL表达式"></a>6.3 EL表达式</h2><ul>
+<li><p>Expression Language表达式语言，用于简化JSP页面内的Java代码</p>
+</li>
+<li><p>主要功能：获取数据</p>
+</li>
+<li><p>语法：${expression}：获取域中存储的key为brands的数据</p>
+</li>
+<li><p>JavaWeb中的四大域对象：</p>
+<ol>
+<li>page：当前页面有效</li>
+<li>request：当前请求有效</li>
+<li>session：当前会话有效</li>
+<li>application：当前应用有效</li>
+</ol>
+<p><strong>EL表达式获取数据，会一次从这四个域中寻找，直到找到为止</strong></p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String s=<span class="string">&quot;郭佳乐臭傻逼&quot;</span>;</span><br><span class="line">request.setCharacterEncoding(<span class="string">&quot;utf-8&quot;</span>);</span><br><span class="line">request.setAttribute(<span class="string">&quot;s&quot;</span>,s);</span><br><span class="line">request.getRequestDispatcher(<span class="string">&quot;/index.jsp&quot;</span>).forward(request,response);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;%<span class="meta">@page</span> isELIgnored=<span class="string">&quot;false&quot;</span> language=<span class="string">&quot;java&quot;</span> pageEncoding=<span class="string">&quot;utf-8&quot;</span> %&gt;</span><br><span class="line">$&#123;s&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="6-4-JSTL"><a href="#6-4-JSTL" class="headerlink" title="6.4 JSTL"></a>6.4 JSTL</h2><ul>
+<li>JSTL标准标签库（Jsp Stardarded Tag Library），使用标签取代JSP页面上的Java代码</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--jstl标签--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.eclipse.jetty<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>apache-jstl<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>11.0.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>taglibs<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>standard<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.1.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>需要导入依赖</p>
+<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;%<span class="meta">@page</span> isELIgnored=<span class="string">&quot;false&quot;</span> language=<span class="string">&quot;java&quot;</span> pageEncoding=<span class="string">&quot;utf-8&quot;</span> %&gt;</span><br><span class="line">&lt;%<span class="meta">@taglib</span> prefix=<span class="string">&quot;c&quot;</span> uri=<span class="string">&quot;http://java.sun.com/jsp/jstl/core&quot;</span> %&gt;</span><br><span class="line"></span><br><span class="line">&lt;c:<span class="keyword">if</span> test=<span class="string">&quot;true&quot;</span> &gt;</span><br><span class="line">    &lt;h1&gt;<span class="literal">true</span>&lt;/h1&gt;</span><br><span class="line">&lt;/c:<span class="keyword">if</span>&gt;</span><br><span class="line">相当于<span class="keyword">for</span>循环</span><br><span class="line">&lt;c:forEach iteams=<span class="string">&quot;$&#123;brands&#125;&quot;</span> <span class="keyword">var</span>=<span class="string">&quot;brand&quot;</span>&gt;</span><br><span class="line">.....</span><br><span class="line">&lt;/c:forEach&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="7、MVC模式与三层架构"><a href="#7、MVC模式与三层架构" class="headerlink" title="7、MVC模式与三层架构"></a>7、MVC模式与三层架构</h1><ul>
+<li><p>MVC是一种分层开发的模式，其中：</p>
+<ol>
+<li>M：Mode'l，业务模型，处理业务</li>
+<li>V:View，视图，界面显示</li>
+<li>C:Controller，控制器，处理请求，调用模型和视图</li>
+</ol>
+</li>
+<li><p>三层架构：</p>
+<ol>
+<li>数据访问层：对数据库的CRUD基本操作   ==dao/mapper==</li>
+<li>业务逻辑层：对业务逻辑进行封装，组合数据访问层中基本功能，形成复杂的业务逻辑功能     ==service==</li>
+<li>表现层：接受请求，封装数据，调用业务逻辑层，响应数据                ==controller==</li>
+</ol>
+</li>
+</ul>
+<h1 id="8、会话跟踪技术"><a href="#8、会话跟踪技术" class="headerlink" title="8、会话跟踪技术"></a>8、会话跟踪技术</h1><ul>
+<li>会话：用户打开浏览器，访问web服务器的资源，会话建立，直到有一方断开连接，会话结束。在一次会话中可以包含多次请求和响应</li>
+<li>会话跟踪：一种维护浏览器状态的方法，服务器需要识别多次请求是否来自同一浏览器，以便在同一次会话的多次请求间==共享数据==</li>
+<li>HTTP协议是无状态的，每次浏览器向服务器请求时，服务器都会将该请求视为新的请求，因此我们需要会话跟踪技术来实现会话内数据共享</li>
+<li>实现方式：<ol>
+<li>客户端会话跟踪技术：Cookie</li>
+<li>服务端会话跟踪技术：Session</li>
+</ol>
+</li>
+</ul>
+<h2 id="8-1-Cookie基本使用"><a href="#8-1-Cookie基本使用" class="headerlink" title="8.1 Cookie基本使用"></a>8.1 Cookie基本使用</h2><ul>
+<li>Cookie：客户端会话技术，将数据保存到客户端，以后每次请求都携带cookie数据进行访问</li>
+<li>Cookie基本使用</li>
+</ul>
+<p>发送Cookie：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">创建Cookie对象，设置数据</span><br><span class="line">    Cookie cookie=<span class="keyword">new</span> <span class="title class_">Cookie</span>(<span class="string">&quot;key&quot;</span>,<span class="string">&quot;value&quot;</span>);</span><br><span class="line"></span><br><span class="line">发送Cookie到客户端：使用response对象</span><br><span class="line">    response.addCookie(cookie);</span><br></pre></td></tr></table></figure>
+
+<p>获取Cookie：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">获取客户端携带的所有Cookie，使用request对象</span><br><span class="line">    Cookie[] cookies=request.getCookies();</span><br><span class="line">遍历数组，获取每一个Cookie的对象</span><br><span class="line">使用Cookie对象方法获取数据</span><br><span class="line">    cookie.getName()</span><br><span class="line">    cookie.getValue()</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>Cookie原理</strong></p>
+<ul>
+<li>Cookie的实现是基于HTTP协议的</li>
+<li>响应头：set-cookie</li>
+<li>请求头：cookie</li>
+</ul>
+<p><strong>Cookie使用细节</strong></p>
+<ul>
+<li><p>Cookie存活时间</p>
+<ol>
+<li><p>默认情况下，Cookie存储在浏览器内存中，当浏览器关闭，内存释放，则Cookie被销毁</p>
+</li>
+<li><p>serMaxAge(int seconds)：设置Cookie存活时间</p>
+<p>==正数==：将Cookie写入浏览器所在电脑的磁盘，持久化存储，到时间自动删除</p>
+<p>==负数==：默认值，Cookie在当前浏览器内存中，当浏览器关闭，则Cookie被销毁</p>
+<p>==零==：删除对应Cookie</p>
+</li>
+</ol>
+</li>
+<li><p>Cookie存储中文</p>
+<ol>
+<li>Cookie不能直接存储中文</li>
+<li>如果需要存储，则需要进行转码，URL编码</li>
+</ol>
+</li>
+</ul>
+<h2 id="8-2-Session的使用"><a href="#8-2-Session的使用" class="headerlink" title="8.2 Session的使用"></a>8.2 Session的使用</h2><p><strong>Session</strong></p>
+<ul>
+<li><p>服务端会话跟踪技术：将数据保存到服务器</p>
+</li>
+<li><p>JavaEE提供HttpSession接口，来实现一次会话的多次请求间数据共享功能</p>
+</li>
+<li><p>使用</p>
+<ol>
+<li><p>获取Session对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">HttpSession</span> <span class="variable">session</span> <span class="operator">=</span>request.getSession()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Session对象功能</p>
+<ul>
+<li>void setAttribute(String name,Object o)：存储数据到session域中</li>
+<li>Object getAttribute(String name)：根据key，获取值</li>
+<li>void removeAttributr(String name)：根据key，删除该键值对</li>
+</ul>
+<p>==Session的实现是基于Cookie的==</p>
+</li>
+</ol>
+</li>
+</ul>
+<p><strong>Session使用细节</strong></p>
+<ul>
+<li><p>Session钝化、活化：</p>
+<ul>
+<li>服务器重启后，Session中的数据是否还在？<ul>
+<li>钝化：在服务器正常关闭后，Tomcat会自动将Session数据写入硬盘的文件中</li>
+<li>活化：再次启动服务器后，从文件中加载数据到Session中</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Session销毁：</p>
+<ul>
+<li><p>默认情况下，无操作，30分钟自动销毁</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">session-config</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">session-timeout</span>&gt;</span>30<span class="tag">&lt;/<span class="name">session-timeout</span>&gt;</span><span class="tag">&lt;/<span class="name">session-config</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>调用Session对象的invalidate()方法</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul>
+<li>Cookie和Session都是来完成一次会话内多次请求间数据共享的</li>
+<li>区别：<ul>
+<li>存储位置：Cookie是将数据存储在客户端，Session将数据存储在服务器</li>
+<li>安全性：Cookie不安全，Session安全</li>
+<li>数据大小：Cookie最大3KB，Session无大小限制</li>
+<li>存储时间：Cookie可以长期存储，Session默认30分钟</li>
+<li>服务器性能能：Cookie不占服务器资源，Session占用服务器资源</li>
+</ul>
+</li>
+</ul>
+<p><img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221225152626144.png" alt="image-20221225152626144"></p>
+<h1 id="9、Filter"><a href="#9、Filter" class="headerlink" title="9、Filter"></a>9、Filter</h1><ul>
+<li>概念：Filter表示过滤器，是JavaWeb三大组件（Servlet、Filter、Listener）之一</li>
+<li>过滤器可以把对资源的请求拦截下来，从而实现一些特殊的功能</li>
+<li>过滤器一般完成一些通用的操作，比如：权限控制、统一编码处理、敏感字符处理等等</li>
+</ul>
+<h2 id="Filter快速入门"><a href="#Filter快速入门" class="headerlink" title="Filter快速入门"></a>Filter快速入门</h2><ol>
+<li>定义类，实现Filter接口，并重写其所有方法</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Filter</span> <span class="keyword">implements</span> <span class="title class_">javax</span>.servlet.Filter &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">init</span><span class="params">(FilterConfig filterConfig)</span> <span class="keyword">throws</span> ServletException &#123;</span><br><span class="line">        javax.servlet.Filter.<span class="built_in">super</span>.init(filterConfig);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">doFilter</span><span class="params">(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)</span> <span class="keyword">throws</span> IOException, ServletException &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">destroy</span><span class="params">()</span> &#123;</span><br><span class="line">        javax.servlet.Filter.<span class="built_in">super</span>.destroy();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2、配置Filter拦截资源的路径：在类上定义@WebFilter注解</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebFilter(&quot;/*&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Filter</span> <span class="keyword">implements</span> <span class="title class_">javax</span>.servlet.Filter &#123;</span><br></pre></td></tr></table></figure>
+
+<p>3、在doFilter方法中输出一句话，并放行</p>
+<p><img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221225162515808.png" alt="image-20221225162515808"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//放行前，对request数据进行处理</span></span><br><span class="line">filterChain.doFilter(servletRequest,servletResponse);</span><br><span class="line"><span class="comment">//放行后。对response数据进行处理</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用细节"><a href="#使用细节" class="headerlink" title="使用细节"></a>使用细节</h2><p>拦截路径配置</p>
+<p><img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221225164543840.png" alt="image-20221225164543840"></p>
+<p>过滤器链</p>
+<ul>
+<li>一个Web应用，可以配置多个过滤器，这多个过滤器称为过滤器链</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">String urls[] = &#123;<span class="string">&quot;/index.html&quot;</span>,<span class="string">&quot;/index.jsp&quot;</span>,<span class="string">&quot;login&quot;</span>,<span class="string">&quot;addUser&quot;</span>&#125;;</span><br><span class="line"><span class="comment">//获取当前访问的资源路径</span></span><br><span class="line"><span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> request.getRequestURL().toString();</span><br><span class="line"><span class="comment">//循环判断</span></span><br><span class="line"><span class="keyword">for</span> (String u:urls</span><br><span class="line">     ) &#123;</span><br><span class="line">    <span class="keyword">if</span> (s.contains(u))&#123;</span><br><span class="line">        <span class="comment">//找到了，放行</span></span><br><span class="line">        filterChain.doFilter(servletRequest,servletResponse);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="10、Listener"><a href="#10、Listener" class="headerlink" title="10、Listener"></a>10、Listener</h1><ul>
+<li>概念：Listener表示监听器，是javaWeb三大组件之一。</li>
+<li>监听器可以监听就是  在application，session，request三个对象创建、销毁或者往其中添加修改删除属性时自动执行代码的功能组件</li>
+<li>Listener分类：JavaWeb中提供了8个监听器</li>
+</ul>
+<p><img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221226125056982.png" alt="image-20221226125056982"></p>
+<h2 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h2><ol>
+<li>定义类，实现ServletContextListener接口</li>
+<li>在类上添加@WebListener注解</li>
+</ol>
+<h1 id="11、AJAX"><a href="#11、AJAX" class="headerlink" title="11、AJAX"></a>11、AJAX</h1><ul>
+<li>概念：AJAX（Asynchronous JavaScript And XML）：异步的JavaScript和XML</li>
+<li>AJAX作用：<ol>
+<li>与服务器进行数据交换：通过AJAX可以给服务器发送请求，并获取服务器响应的数据<ul>
+<li>使用了AJAX和服务器进行通信，就可以使用HTML+AJAX来替换jsp页面了</li>
+</ul>
+</li>
+<li>异步交互：可以在==不重新加载整个页面==的情况下，于服务器交换数据并==更新部分==网页的技术，如：搜索联想、用户名是否可以校验，等等....</li>
+</ol>
+</li>
+</ul>
+<p><img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221226131303781.png" alt="image-20221226131303781"></p>
+<h2 id="AJAX快速入门"><a href="#AJAX快速入门" class="headerlink" title="AJAX快速入门"></a>AJAX快速入门</h2><p>1、编写AjaxServlet，并使用response输出字符串</p>
+<p>2、创建XMLHttpRequest对象：用于和服务器交换数据</p>
+<p>3、向服务器发送请求</p>
+<p>4、获取服务器响应数据 </p>
+<h2 id="Axios异步框架"><a href="#Axios异步框架" class="headerlink" title="Axios异步框架"></a>Axios异步框架</h2><ul>
+<li>Axios对原生的AJAX进行封装，简化书写</li>
+</ul>
+<p><img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221226153616137.png" alt="image-20221226153616137"></p>
+<h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><p>概念：JavaScript Object Notation。JavaScript对象表示法</p>
+<p>由于其语法简单，层次结构鲜明，现多用于作为==数据载体==，在网络中进行数据传输<img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221226160647207.png" alt="image-20221226160647207"></p>
+<p><img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221226161048046.png" alt="image-20221226161048046"></p>
+<p><img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221226161405395.png" alt="image-20221226161405395"></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;u&quot;</span>).<span class="property">onblur</span>=<span class="keyword">function</span> (<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> http;</span><br><span class="line">    http=<span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>();</span><br><span class="line">    http.<span class="title function_">open</span>(<span class="string">&quot;get&quot;</span>,<span class="string">&quot;http://localhost/Servlet2/ajaxServlet?username=&quot;</span>+u.<span class="property">value</span>);</span><br><span class="line">    http.<span class="title function_">send</span>()</span><br><span class="line">    http.<span class="property">onreadystatechange</span>=<span class="keyword">function</span> (<span class="params"></span>)&#123;</span><br><span class="line">        <span class="keyword">if</span> (http.<span class="property">status</span>==<span class="number">200</span>&amp;&amp;http.<span class="property">readyState</span>==<span class="number">4</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span> (http.<span class="property">responseText</span>==<span class="number">0</span>)&#123;</span><br><span class="line">                <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;msg&quot;</span>).<span class="property">innerHTML</span>=<span class="string">&quot;用户不存在！&quot;</span></span><br><span class="line">                <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;msg&quot;</span>).<span class="property">style</span>.<span class="property">color</span>=<span class="string">&quot;red&quot;</span></span><br><span class="line">                <span class="comment">// alert(http.responseText)</span></span><br><span class="line">            &#125;<span class="keyword">else</span></span><br><span class="line">                <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;msg&quot;</span>).<span class="property">innerHTML</span>=<span class="string">&quot;&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>post方法需要使用字节输入流来读取</p>
+<p>引用Axios</p>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+
+<h1 id="12、Vue"><a href="#12、Vue" class="headerlink" title="12、Vue"></a>12、Vue</h1><ul>
+<li>Vue 是一套==前端框架==，免除原生JavaScript中的DOM操作，简化书写</li>
+<li>基于==MVVM==（Model-View-ViewModel）思想，实现数据的==双向绑定==，将编程的关注点放在数据上</li>
+<li>官网：<a target="_blank" rel="noopener" href="https://cn.vuejs.org/">https://cn.vuejs.org</a></li>
+</ul>
+<h2 id="12-1-Vue快速入门"><a href="#12-1-Vue快速入门" class="headerlink" title="12.1 Vue快速入门"></a>12.1 Vue快速入门</h2><ol>
+<li><p>新建HTML页面，引入Vue.js文件</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在JS代码区域，创建Vue核心对象，进行数据绑定</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">new Vue(&#123;</span><br><span class="line">el:&quot;#app&quot;,</span><br><span class="line">data()&#123;</span><br><span class="line">return&#123;</span><br><span class="line">username:&quot;&quot;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编写视图</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;username&quot;</span>&gt;</span></span><br><span class="line">    &#123;&#123;username&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="12-2-Vue常用指令"><a href="#12-2-Vue常用指令" class="headerlink" title="12.2 Vue常用指令"></a>12.2 Vue常用指令</h2><p><img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221226203935101.png" alt="image-20221226203935101"></p>
+<ul>
+<li><p>v-bind：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">v-bind:href</span>=<span class="string">&quot;url&quot;</span>&gt;</span>百度一下<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">new Vue(&#123;</span><br><span class="line">  el:&quot;#app&quot;,</span><br><span class="line">  data()&#123;</span><br><span class="line">    return&#123;</span><br><span class="line">      username:&quot;&quot;,</span><br><span class="line">      url:&quot;https://www.baidu.com&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>v-on：为HTML标签绑定事件</p>
+<p>html：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">&quot;username&quot;</span> <span class="attr">v-on:click</span>=<span class="string">&quot;show&quot;</span>&gt;</span></span><br><span class="line">或者：</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">v-model</span>=<span class="string">&quot;username&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;show&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>vue:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">methods:&#123;</span><br><span class="line">    show()&#123;</span><br><span class="line">        alert(&quot;我被电了&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>v-if、v-else、v-else-if：条件性的渲染莫元素，判定为true时渲染，否则不渲染</p>
+</li>
+<li><p>v-show：根据条件展示某元素，区别在于切换的是display属性的值</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">&quot;count == 3&quot;</span>&gt;</span>div1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-else-if</span>=<span class="string">&quot;count == 4&quot;</span>&gt;</span>div2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-if</span>=<span class="string">&quot;count == 5&quot;</span>&gt;</span>div3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>v-for：列表渲染，遍历容器的元素或者对象的属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">&quot;addr in addrs&quot;</span>&gt;</span></span><br><span class="line">    &#123;&#123;addr&#125;&#125;<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">&quot;(addr,i) in addrs&quot;</span>&gt;</span></span><br><span class="line">    &#123;&#123;i+1&#125;&#125;、&#123;&#123;addr&#125;&#125;<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">data()&#123;</span><br><span class="line">    return&#123;</span><br><span class="line">        addrs:[&quot;北京&quot;,&quot;上海&quot;,&quot;西安&quot;]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221226233323967.png" alt="image-20221226233323967"></p>
+<h2 id="12-3-Vue生命周期"><a href="#12-3-Vue生命周期" class="headerlink" title="12.3 Vue生命周期"></a>12.3 Vue生命周期</h2><p><img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221226233534270.png" alt="image-20221226233534270"></p>
+<p><img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221226233608227.png" alt="image-20221226233608227"></p>
+<h2 id="12-4-Vue练习"><a href="#12-4-Vue练习" class="headerlink" title="12.4 Vue练习"></a>12.4 Vue练习</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">new Vue(&#123;</span><br><span class="line">  el:&quot;#all&quot;,data()&#123;</span><br><span class="line">    return&#123;</span><br><span class="line">      users:[]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted()&#123;</span><br><span class="line">    //页面加载完成后，发送异步请求，查询数据</span><br><span class="line">    // alert(1)</span><br><span class="line">    var xhttp;</span><br><span class="line">    var _this=this;</span><br><span class="line">    xhttp=new XMLHttpRequest();</span><br><span class="line">    xhttp.open(&quot;post&quot;,&quot;http://localhost/Servlet2/selectUser&quot;)</span><br><span class="line">    xhttp.send(&quot;1&quot;);</span><br><span class="line">    xhttp.onreadystatechange=function ()&#123;</span><br><span class="line">      if (xhttp.status==200&amp;&amp;xhttp.readyState==4)&#123;</span><br><span class="line">        _this.users=JSON.parse(xhttp.responseText)</span><br><span class="line">        // users=xhttp.responseText</span><br><span class="line">        console.log(_this.users)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><strong>this不能使用原生的this，需要声明一个变量去转换</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">table</span> <span class="attr">id</span>=<span class="string">&quot;userTable&quot;</span> <span class="attr">border</span>=<span class="string">&quot;1&quot;</span> <span class="attr">cellspacing</span>=<span class="string">&quot;0&quot;</span> <span class="attr">width</span>=<span class="string">&quot;100%&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>序号<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>用户名<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>密码<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">使用v-for遍历</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">tr</span> <span class="attr">v-for</span>=<span class="string">&quot;(user,i) in users&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>&#123;&#123;i+1&#125;&#125;<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>&#123;&#123;user.username&#125;&#125;<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>&#123;&#123;user.password&#125;&#125;<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="13、Element"><a href="#13、Element" class="headerlink" title="13、Element"></a>13、Element</h1><ul>
+<li>Element：是饿了么公司 前端开发团队提供的一套基于Vue的网站组件库，用于快速构建网页</li>
+<li>组件：组成网页的部分，例如 超链接、按钮、图片、表格等等~</li>
+</ul>
+<h2 id="Element快速入门"><a href="#Element快速入门" class="headerlink" title="Element快速入门"></a>Element快速入门</h2><ol>
+<li><p>引入Element的css、js文件和Vue.js</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/vue.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 引入样式 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://unpkg.com/element-ui/lib/theme-chalk/index.css&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 引入组件库 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://unpkg.com/element-ui/lib/index.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建Vue核心对象</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">new Vue(&#123;</span><br><span class="line">  el:&quot;#app&quot;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>官网复制想要的组件代码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-row</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-button</span>&gt;</span>默认按钮<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span>&gt;</span>主要按钮<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;success&quot;</span>&gt;</span>成功按钮<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;info&quot;</span>&gt;</span>信息按钮<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;warning&quot;</span>&gt;</span>警告按钮<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;danger&quot;</span>&gt;</span>危险按钮<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-row</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="Element布局"><a href="#Element布局" class="headerlink" title="Element布局"></a>Element布局</h2><ul>
+<li><p>Layout布局：通过基础的24分栏，迅速便捷地创建布局</p>
+<p><img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221227205444566.png" alt="image-20221227205444566"></p>
+</li>
+<li><p>Container布局容器：用于布局的容器组件，方便快速搭建页面的基本结构</p>
+</li>
+</ul>
+<p><img src="C:\Users\jpx\AppData\Roaming\Typora\typora-user-images\image-20221227210656937.png" alt="image-20221227210656937"></p>
+<h2 id="Element组件"><a href="#Element组件" class="headerlink" title="Element组件"></a>Element组件</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-table</span></span></span><br><span class="line"><span class="tag">            <span class="attr">:data</span>=<span class="string">&quot;tableData&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">style</span>=<span class="string">&quot;width: 100%&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">:row-class-name</span>=<span class="string">&quot;tableRowClassName&quot;</span></span></span><br><span class="line"><span class="tag">            @<span class="attr">selection-change</span>=<span class="string">&quot;handleSelectionChange&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>最后一行可以绑定选择事件</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">handleSelectionChange(val) &#123;</span><br><span class="line">    this.multipleSelection = val;</span><br><span class="line">    console.log(this.multipleSelection)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>method中添加的</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">multipleSelection:[],</span><br></pre></td></tr></table></figure>
+
+<p>data中添加的</p>
+<h1 id="Servlet代码优化"><a href="#Servlet代码优化" class="headerlink" title="Servlet代码优化"></a>Servlet代码优化</h1><ul>
+<li>Web层的Servlet个数太多了，不利于管理和编写</li>
+<li>将Servlet进行归类，对于同一个实体的操作方法，写道同一个Servlet中</li>
+</ul>
+<p>自定义Servlet，使用请求路径进行方法分发，替换HttpServlet的根据请求方法进行方法分发</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">uri</span> <span class="operator">=</span> req.getRequestURI();</span><br><span class="line"></span><br><span class="line">      <span class="comment">//2、获取最后一段，方法名</span></span><br><span class="line">      <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> uri.lastIndexOf(<span class="string">&quot;/&quot;</span>);</span><br><span class="line">      <span class="type">String</span> <span class="variable">methodName</span> <span class="operator">=</span> uri.substring(i + <span class="number">1</span>);</span><br><span class="line">      System.out.println(methodName);</span><br><span class="line">      Class&lt;? <span class="keyword">extends</span> <span class="title class_">BaseServlet</span>&gt; aClass = <span class="built_in">this</span>.getClass();</span><br><span class="line">      <span class="keyword">try</span> &#123;</span><br><span class="line"></span><br><span class="line">          <span class="type">Method</span> <span class="variable">method</span> <span class="operator">=</span> aClass.getMethod(methodName, HttpServletRequest.class, HttpServletResponse.class);</span><br><span class="line"></span><br><span class="line">          method.invoke(<span class="built_in">this</span>,req,resp);</span><br><span class="line">      &#125; <span class="keyword">catch</span> (NoSuchMethodException e) &#123;</span><br><span class="line">          <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e);</span><br><span class="line">      &#125; <span class="keyword">catch</span> (InvocationTargetException e) &#123;</span><br><span class="line">          <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e);</span><br><span class="line">      &#125; <span class="keyword">catch</span> (IllegalAccessException e) &#123;</span><br><span class="line">          <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(e);</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">小语</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2023/10/26/Java%20Web/">http://example.com/2023/10/26/Java%20Web/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">小语</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2023/10/26/Git%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-10-26
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            小语
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/10/26/%E6%89%8B%E6%9C%BA/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-26
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            小语
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 啊语的小空间<br />'
+            + '文章作者: 小语<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2023</span>
+            
+            <a href="/about" target="_blank">小语</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">31.2k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2023";
+                        var startMonth = "10";
+                        var startDate = "26";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/jppppppx" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2926428672@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2926428672" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2926428672" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
