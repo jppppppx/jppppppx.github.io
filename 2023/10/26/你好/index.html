@@ -4,9 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="啊语的小空间">
-    <meta name="description" content="Maven 高级一、分模块开发与设计
-">
+    <meta name="keywords" content="你好，随笔, 啊语的小空间">
+    <meta name="description" content="1、数据结构简介
+1、1 数组存储在连续的内存空间，长度不可变
+1、2 链表存储在内存空间非连续，链表的节点对象有两个成员变量：value（值）、next（后继节点的引用）
+例：
+12345678910public my class&amp;#12">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +21,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>啊语的小空间</title>
+    <title>你好，随笔 | 啊语的小空间</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -335,12 +338,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">你好，随笔</h1>
                 </div>
             </div>
         </div>
@@ -362,12 +365,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                                <span class="chip bg-color">随笔</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
+                                随笔
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -390,14 +406,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    12
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    8 分
                 </div>
                 
 
@@ -417,7 +433,69 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Maven-高级"><a href="#Maven-高级" class="headerlink" title="Maven 高级"></a>Maven 高级</h1><h2 id="一、分模块开发与设计"><a href="#一、分模块开发与设计" class="headerlink" title="一、分模块开发与设计"></a>一、分模块开发与设计</h2><p><img src="F:\笔记\image-20230109141513855.png" alt="image-20230109141513855"></p>
+                <h1 id="1、数据结构简介"><a href="#1、数据结构简介" class="headerlink" title="1、数据结构简介"></a>1、数据结构简介</h1><p><img src="https://jpx-img-bucket.oss-cn-beijing.aliyuncs.com/img202310191329984.png" alt="image-20231019132902741"></p>
+<h3 id="1、1-数组"><a href="#1、1-数组" class="headerlink" title="1、1 数组"></a>1、1 数组</h3><p>存储在连续的内存空间，长度不可变</p>
+<h3 id="1、2-链表"><a href="#1、2-链表" class="headerlink" title="1、2 链表"></a>1、2 链表</h3><p>存储在内存空间非连续，链表的节点对象有两个成员变量：value（值）、next（后继节点的引用）</p>
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> my class&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ListNode</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> value;</span><br><span class="line">    <span class="keyword">private</span> ListNode next;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">ListNode</span><span class="params">(<span class="type">int</span> val)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.value=val;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>示例中定义了一个链表节点类，我们可以实例化之后直接指定它的下一个节点引用。</p>
+<h3 id="1、3-栈"><a href="#1、3-栈" class="headerlink" title="1、3 栈"></a>1、3 栈</h3><p>先进后出</p>
+<p><img src="https://jpx-img-bucket.oss-cn-beijing.aliyuncs.com/img202310191350503.png" alt="Picture4.png"></p>
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Stack&lt;String&gt; stack=<span class="keyword">new</span> <span class="title class_">Stack</span>&lt;&gt;();</span><br><span class="line">        stack.push(<span class="string">&quot;老几傻逼&quot;</span>);  <span class="comment">//返回值为&lt;E&gt;</span></span><br><span class="line">        stack.add(<span class="string">&quot;确实&quot;</span>); <span class="comment">//返回值为boolean</span></span><br><span class="line">        System.out.println(stack.size());</span><br><span class="line">        <span class="keyword">for</span> (String s:stack</span><br><span class="line">             ) &#123;</span><br><span class="line">            System.out.println(s);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1、4-队列"><a href="#1、4-队列" class="headerlink" title="1、4 队列"></a>1、4 队列</h3><p>队列先进先出，可以使用链表实现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Queue&lt;String&gt; queue=<span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        queue.add(<span class="string">&quot;郭佳乐&quot;</span>);</span><br><span class="line">        queue.offer(<span class="string">&quot;队列&quot;</span>);</span><br><span class="line">        System.out.println(push);</span><br></pre></td></tr></table></figure>
+
+<h3 id="1、5-二叉树"><a href="#1、5-二叉树" class="headerlink" title="1、5 二叉树"></a>1、5 二叉树</h3><p>树是非线性结构，分为二叉树和多叉树，最顶层为根节点。</p>
+<p>二叉树每个节点有三个成员变量：值（value）、左子节点（left）、右子节点（right）</p>
+<p>例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">TreeNode</span> &#123;</span><br><span class="line">    <span class="type">int</span> val;        <span class="comment">// 节点值</span></span><br><span class="line">    TreeNode left;  <span class="comment">// 左子节点</span></span><br><span class="line">    TreeNode right; <span class="comment">// 右子节点</span></span><br><span class="line">    TreeNode(<span class="type">int</span> x) &#123; val = x; &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">test2</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="comment">//初始化节点</span></span><br><span class="line">        TreeNode t1=<span class="keyword">new</span> <span class="title class_">TreeNode</span>(<span class="number">3</span>);</span><br><span class="line">        TreeNode t2=<span class="keyword">new</span> <span class="title class_">TreeNode</span>(<span class="number">4</span>);</span><br><span class="line">        TreeNode t3=<span class="keyword">new</span> <span class="title class_">TreeNode</span>(<span class="number">5</span>);</span><br><span class="line">        TreeNode t4=<span class="keyword">new</span> <span class="title class_">TreeNode</span>(<span class="number">2</span>);</span><br><span class="line">        TreeNode t5=<span class="keyword">new</span> <span class="title class_">TreeNode</span>(<span class="number">1</span>);</span><br><span class="line">        <span class="comment">//t1为顶点</span></span><br><span class="line">        t1.left=t2;</span><br><span class="line">        t1.right=t3;</span><br><span class="line">        t2.left=t5;</span><br><span class="line">        t2.right=t4;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>如图所示</p>
+<p><img src="https://jpx-img-bucket.oss-cn-beijing.aliyuncs.com/img202310191657488.png" alt="Picture6.png"></p>
+<blockquote>
+<details>
+<summary>道歉</summary>
+萝卜：
+就昨天晚上发生的事情，我真诚的向你道歉。我总结了最近几天我做错的几件事情如下：
+1. 白天上班的时候说好一人买一件衣服，但是你说给我买了两件之后没有追问你有没有买。
+2. 对你闺蜜不尊重，我不该拿你闺蜜的感情开玩笑，也不应该随便推荐没有意义的人选。
+3. 在犯错时没有坚持哄你而是在旁边不说话让你自己消化情绪，并且后来还和你争论抱怨。
+4. 不应该在你睡觉的时候碰你，特别是做不尊重你的事情，你在没消气的情况下欺负你并且没大没小。
+对于以上的错误，我知道有些是无法弥补的，我也不奢求取得你的原谅，到如今这个地步都是我作出来的，我一步步把你推开，让你对我一次次失望，我如今再说什么保证、恳求这些话你肯定也不会相信了，所以我>>只能像这样跟你正式道个歉，我没有成为一个合格的男朋友。
+如果还有机会，我真想好好弥补我所作的这些错事，但是你现在肯定很累，很失望了。对不起啊。。。
+</details>
+</blockquote>
+<h3 id="1、获取分诊后患者信息"><a href="#1、获取分诊后患者信息" class="headerlink" title="1、获取分诊后患者信息"></a>1、获取分诊后患者信息</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//患者基本信息：</span></span><br><span class="line"><span class="built_in">int</span> CardType;</span><br><span class="line"><span class="built_in">string</span> CardNo;</span><br><span class="line"><span class="comment">//分诊号</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://jpx-img-bucket.oss-cn-beijing.aliyuncs.com/img202310201505698.png" alt="image-20231020150536412"></p>
+<pre><code>    /// &lt;summary&gt;
+    /// 获取病人基本信息
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;CardType&quot;&gt;&lt;/param&gt;
+    /// &lt;param name=&quot;CardNo&quot;&gt;&lt;/param&gt;
+    /// &lt;returns&gt;&lt;/returns&gt;
+    [HttpGet]
+    public async Task&lt;AjaxResult&gt; GetHisPatientInfoByType(int CardType, string CardNo)
+    &#123;
+        if (string.IsNullOrEmpty(CardNo))
+        &#123;
+            return new AjaxResult(&quot;CardNo不能为空&quot;, AjaxResultType.Error);
+        &#125;
+        if (CardType == 0)
+        &#123;
+            return new AjaxResult(&quot;CardType传参错误&quot;, AjaxResultType.Error);
+        &#125;
+        var result = await _patientService.GetHisPatientInfoByType(CardType, CardNo);
+        return result.ToAjaxResult(true);
+    &#125;
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;el-dialog v-bind=&quot;$attrs&quot; v-on=&quot;$listeners&quot; @open=&quot;onOpen&quot; @close=&quot;onClose&quot; title=&quot;Dialog Title&quot;&gt;</span><br><span class="line">      &lt;el-form ref=&quot;elForm&quot; :model=&quot;formData&quot; :rules=&quot;rules&quot; size=&quot;mini&quot; label-width=&quot;100px&quot;</span><br><span class="line">        label-position=&quot;top&quot;&gt;</span><br><span class="line">        &lt;el-form-item label=&quot;所属平台&quot; prop=&quot;belong&quot;&gt;</span><br><span class="line">          &lt;el-select v-model=&quot;formData.belong&quot; placeholder=&quot;请选择所属平台&quot; clearable :style=&quot;&#123;width: &#x27;100%&#x27;&#125;&quot;&gt;</span><br><span class="line">          &lt;/el-select&gt;</span><br><span class="line">        &lt;/el-form-item&gt;</span><br><span class="line">        &lt;el-form-item label=&quot;账号&quot; prop=&quot;username&quot;&gt;</span><br><span class="line">          &lt;el-input v-model=&quot;formData.username&quot; placeholder=&quot;请输入账号&quot; clearable :style=&quot;&#123;width: &#x27;100%&#x27;&#125;&quot;&gt;</span><br><span class="line">          &lt;/el-input&gt;</span><br><span class="line">        &lt;/el-form-item&gt;</span><br><span class="line">        &lt;el-form-item label=&quot;密码&quot; prop=&quot;password&quot;&gt;</span><br><span class="line">          &lt;el-input v-model=&quot;formData.password&quot; placeholder=&quot;请输入密码&quot; clearable show-password</span><br><span class="line">            :style=&quot;&#123;width: &#x27;100%&#x27;&#125;&quot;&gt;&lt;/el-input&gt;</span><br><span class="line">        &lt;/el-form-item&gt;</span><br><span class="line">        &lt;el-form-item label=&quot;是否注册&quot; prop=&quot;isregistry&quot;&gt;</span><br><span class="line">          &lt;el-input v-model=&quot;formData.isregistry&quot; placeholder=&quot;请输入是否注册&quot; clearable :style=&quot;&#123;width: &#x27;100%&#x27;&#125;&quot;&gt;</span><br><span class="line">          &lt;/el-input&gt;</span><br><span class="line">        &lt;/el-form-item&gt;</span><br><span class="line">        &lt;el-form-item label-width=&quot;120px&quot; label=&quot;是否绑定GPT&quot; prop=&quot;isgptbond&quot;&gt;</span><br><span class="line">          &lt;el-input v-model=&quot;formData.isgptbond&quot; placeholder=&quot;请输入是否绑定GPT&quot; clearable :style=&quot;&#123;width: &#x27;100%&#x27;&#125;&quot;&gt;</span><br><span class="line">          &lt;/el-input&gt;</span><br><span class="line">        &lt;/el-form-item&gt;</span><br><span class="line">        &lt;el-form-item label-width=&quot;120px&quot; label=&quot;是否升级到4&quot; prop=&quot;isplus&quot;&gt;</span><br><span class="line">          &lt;el-input v-model=&quot;formData.isplus&quot; placeholder=&quot;请输入是否升级到4&quot; clearable :style=&quot;&#123;width: &#x27;100%&#x27;&#125;&quot;&gt;</span><br><span class="line">          &lt;/el-input&gt;</span><br><span class="line">        &lt;/el-form-item&gt;</span><br><span class="line">        &lt;el-form-item label=&quot;备注&quot; prop=&quot;bz&quot;&gt;</span><br><span class="line">          &lt;el-input v-model=&quot;formData.bz&quot; placeholder=&quot;请输入备注&quot; clearable :style=&quot;&#123;width: &#x27;100%&#x27;&#125;&quot;&gt;&lt;/el-input&gt;</span><br><span class="line">        &lt;/el-form-item&gt;</span><br><span class="line">        &lt;el-form-item label=&quot;有效期至&quot; prop=&quot;overtime&quot;&gt;</span><br><span class="line">          &lt;el-date-picker v-model=&quot;formData.overtime&quot; format=&quot;yyyy-MM-dd&quot; value-format=&quot;yyyy-MM-dd&quot;</span><br><span class="line">            :style=&quot;&#123;width: &#x27;100%&#x27;&#125;&quot; placeholder=&quot;请选择有效期至&quot; clearable&gt;&lt;/el-date-picker&gt;</span><br><span class="line">        &lt;/el-form-item&gt;</span><br><span class="line">        &lt;el-form-item label=&quot;&quot; prop=&quot;field113&quot;&gt;</span><br><span class="line">          &lt;el-button type=&quot;primary&quot; icon=&quot;el-icon-search&quot; size=&quot;medium&quot;&gt; 主要按钮 &lt;/el-button&gt;</span><br><span class="line">        &lt;/el-form-item&gt;</span><br><span class="line">      &lt;/el-form&gt;</span><br><span class="line">      &lt;div slot=&quot;footer&quot;&gt;</span><br><span class="line">        &lt;el-button @click=&quot;close&quot;&gt;取消&lt;/el-button&gt;</span><br><span class="line">        &lt;el-button type=&quot;primary&quot; @click=&quot;handleConfirm&quot;&gt;确定&lt;/el-button&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/el-dialog&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  inheritAttrs: false,</span><br><span class="line">  components: &#123;&#125;,</span><br><span class="line">  props: [],</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      formData: &#123;</span><br><span class="line">        belong: undefined,</span><br><span class="line">        username: undefined,</span><br><span class="line">        password: undefined,</span><br><span class="line">        isregistry: undefined,</span><br><span class="line">        isgptbond: undefined,</span><br><span class="line">        isplus: undefined,</span><br><span class="line">        bz: &#x27;&#x27;,</span><br><span class="line">        overtime: null,</span><br><span class="line">        field113: &#x27;&#x27;,</span><br><span class="line">      &#125;,</span><br><span class="line">      rules: &#123;</span><br><span class="line">        belong: [&#123;</span><br><span class="line">          required: true,</span><br><span class="line">          message: &#x27;请选择所属平台&#x27;,</span><br><span class="line">          trigger: &#x27;change&#x27;</span><br><span class="line">        &#125;],</span><br><span class="line">        username: [&#123;</span><br><span class="line">          required: true,</span><br><span class="line">          message: &#x27;请输入账号&#x27;,</span><br><span class="line">          trigger: &#x27;blur&#x27;</span><br><span class="line">        &#125;],</span><br><span class="line">        password: [&#123;</span><br><span class="line">          required: true,</span><br><span class="line">          message: &#x27;请输入密码&#x27;,</span><br><span class="line">          trigger: &#x27;blur&#x27;</span><br><span class="line">        &#125;],</span><br><span class="line">        isregistry: [&#123;</span><br><span class="line">          required: true,</span><br><span class="line">          message: &#x27;请输入是否注册&#x27;,</span><br><span class="line">          trigger: &#x27;blur&#x27;</span><br><span class="line">        &#125;],</span><br><span class="line">        isgptbond: [&#123;</span><br><span class="line">          required: true,</span><br><span class="line">          message: &#x27;请输入是否绑定GPT&#x27;,</span><br><span class="line">          trigger: &#x27;blur&#x27;</span><br><span class="line">        &#125;],</span><br><span class="line">        isplus: [&#123;</span><br><span class="line">          required: true,</span><br><span class="line">          message: &#x27;请输入是否升级到4&#x27;,</span><br><span class="line">          trigger: &#x27;blur&#x27;</span><br><span class="line">        &#125;],</span><br><span class="line">        bz: [],</span><br><span class="line">        overtime: [],</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;&#125;,</span><br><span class="line">  watch: &#123;&#125;,</span><br><span class="line">  created() &#123;&#125;,</span><br><span class="line">  mounted() &#123;&#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    onOpen() &#123;&#125;,</span><br><span class="line">    onClose() &#123;</span><br><span class="line">      this.$refs[&#x27;elForm&#x27;].resetFields()</span><br><span class="line">    &#125;,</span><br><span class="line">    close() &#123;</span><br><span class="line">      this.$emit(&#x27;update:visible&#x27;, false)</span><br><span class="line">    &#125;,</span><br><span class="line">    handleConfirm() &#123;</span><br><span class="line">      this.$refs[&#x27;elForm&#x27;].validate(valid =&gt; &#123;</span><br><span class="line">        if (!valid) return</span><br><span class="line">        this.close()</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 
                 
             </div>
@@ -444,7 +522,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2023/10/26/Maven%20%E9%AB%98%E7%BA%A7/">http://example.com/2023/10/26/Maven%20%E9%AB%98%E7%BA%A7/</a>
+                    <a href="http://example.com/2023/10/26/%E4%BD%A0%E5%A5%BD/">http://example.com/2023/10/26/%E4%BD%A0%E5%A5%BD/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -481,7 +559,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                                    <span class="chip bg-color">随笔</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -558,17 +640,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/10/26/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%80%BB%E7%BB%93/">
+                <a href="/2023/10/26/%E4%BD%A0%E5%A5%BD/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="你好，随笔">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">你好，随笔</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -578,16 +661,29 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-10-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-26
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            小语
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
+                                    随笔
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9A%8F%E7%AC%94/">
+                        <span class="chip bg-color">随笔</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -599,7 +695,7 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/10/26/Mybatis-Plus/">
+                <a href="/2023/10/26/Git%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7/">
                     <div class="card-image">
                         
                         
